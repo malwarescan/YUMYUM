@@ -17,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="bg-creamYum text-purpleYum">
-      <body className={`${inter.variable} ${fredoka.variable} font-sans`}>
+    <html lang="en">
+      <body
+        className={`${inter.variable} ${fredoka.variable} font-sans bg-creamYum text-purpleYum min-h-screen`}
+      >
         {children}
       </body>
     </html>
