@@ -1,18 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./src/**/*.{js,ts,jsx,tsx}'],
-    theme: {
-      extend: {
-        colors: {
-          goldYum: '#F4C430',
-          creamYum: '#FDF1D6',
-          purpleYum: '#5B3E96',
-          tealYum: '#1EC6B0',
-        },
-        fontFamily: {
-          display: ['Fredoka', 'sans-serif'],
-        },
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Fredoka', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+      },
+      colors: {
+        creamYum: '#f8e7c4',
+        goldYum: '#efad00',
+        purpleYum: '#583e8d',
+        hotPinkYum: '#e14d96',
+        tealYum: '#19a89e',
       },
     },
-    plugins: [],
-  }
+  },
+  plugins: [],
+}

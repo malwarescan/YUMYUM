@@ -1,8 +1,9 @@
+import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Fredoka } from 'next/font/google'
-import './globals.css'
+import { CartProvider } from '@/lib/CartContext'
 
-// Load Google Fonts as CSS variables
+// Load Google Fonts with CSS variable support
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const fredoka = Fredoka({ subsets: ['latin'], variable: '--font-fredoka' })
 
@@ -17,11 +18,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.variable} ${fredoka.variable} font-sans bg-creamYum text-purpleYum min-h-screen`}
-      >
-        {children}
+    <html lang="en" className={`${inter.variable} ${fredoka.variable}`}>
+      <body className="font-sans bg-creamYum text-purpleYum min-h-screen">
+        <CartProvider>
+          {children}
+        </CartProvider>
       </body>
     </html>
   )
